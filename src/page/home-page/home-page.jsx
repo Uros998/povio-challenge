@@ -82,7 +82,8 @@ function HomePage() {
                         <Material.Button variant="contained" onClick={() => setFilterStatus('all')} color="warning">
                             All
                         </Material.Button>
-                        <Material.Button variant="contained" onClick={() => setFilterStatus('Development')} color="warning">
+                        <Material.Button variant="contained" onClick={() => setFilterStatus('Development')}
+                                         color="warning">
                             Development
                         </Material.Button>
                         <Material.Button variant="contained" onClick={() => setFilterStatus('Services')}
@@ -148,12 +149,46 @@ function HomePage() {
 
                     </Material.Dialog>
                 </div>
-
-
-                <div className="cards-wrapper">
-                    {filterTasks.map((cardData) => (
-                        <Card key={cardData.id} data={cardData} deleteTask={deleteTask}/>
-                    ))}
+                <div className="home-content">
+                    <div className="filter-wrapper">
+                        <div className="filters">
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.RadioGroup
+                                aria-labelledby="demo-radio-buttons-group-label"
+                                defaultValue="female"
+                                name="radio-buttons-group"
+                            >
+                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
+                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
+                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                            </Material.RadioGroup>
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.RadioGroup
+                                aria-labelledby="demo-radio-buttons-group-label"
+                                defaultValue="female"
+                                name="radio-buttons-group"
+                            >
+                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
+                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
+                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                            </Material.RadioGroup>
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.RadioGroup
+                                aria-labelledby="demo-radio-buttons-group-label"
+                                defaultValue="female"
+                                name="radio-buttons-group"
+                            >
+                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
+                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
+                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                            </Material.RadioGroup>
+                        </div>
+                    </div>
+                    <div className="cards-wrapper">
+                        {filterTasks.map((cardData) => (
+                            <Card key={cardData.id} data={cardData} deleteTask={deleteTask}/>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

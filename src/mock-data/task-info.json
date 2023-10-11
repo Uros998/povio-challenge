@@ -3,30 +3,35 @@
     "id": 1,
     "title": "Prvi Naslov",
     "note": "Ovo je prva napomena.",
-    "status": "Development"
+    "status": "Development",
+    "subStatus": "Java"
   },
   {
     "id": 2,
     "title": "Drugi Naslov",
     "note": "Ovo je druga napomena.",
-    "status": "Services"
+    "status": "Services",
+    "subStatus": "Marketing"
   },
   {
     "id": 3,
     "title": "Treći Naslov",
     "note": "Ovo je treća napomena.",
-    "status": "Services"
+    "status": "Services",
+    "subStatus": "Marketing"
   },
   {
     "id": 4,
     "title": "Cetvrti Naslov",
     "note": "Ovo je cetvrta napomena.",
-    "status": "Development"
+    "status": "Development",
+    "subStatus": "Java"
   },
   {
     "id": 5,
     "title": "Peti Naslov",
     "note": "Ovo je peta napomena.",
-    "status": "Development"
+    "status": "Development",
+    "subStatus": "Angular"
   }
 ]
