@@ -4,7 +4,7 @@
     "title": "Prvi Naslov",
     "note": "Ovo je prva napomena.",
     "status": "Development",
-    "subStatus": "Java"
+    "subStatus": "Graphic Desing"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "title": "Cetvrti Naslov",
     "note": "Ovo je cetvrta napomena.",
     "status": "Development",
-    "subStatus": "Java"
+    "subStatus": "React"
   },
   {
     "id": 5,
@@ -33,5 +33,26 @@
     "note": "Ovo je peta napomena.",
     "status": "Development",
     "subStatus": "Angular"
+  },
+  {
+    "id": 6,
+    "title": "Treći Naslov",
+    "note": "Ovo je treća napomena.",
+    "status": "Services",
+    "subStatus": "Marketing"
+  },
+  {
+    "id": 7,
+    "title": "Cetvrti Naslov",
+    "note": "Ovo je cetvrta napomena.",
+    "status": "Development",
+    "subStatus": "Graphic Desing"
+  },
+  {
+    "id": 8,
+    "title": "Peti Naslov",
+    "note": "Ovo je peta napomena.",
+    "status": "Development",
+    "subStatus": "UI/UX"
   }
 ]

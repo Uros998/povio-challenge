@@ -16,8 +16,9 @@ function HomePage() {
         id: undefined,
         title: '',
         note: '',
-        status: ''
+        status: '',
     });
+
 
     useEffect(() => {
         getAllTasks().then(setTasks);
@@ -27,10 +28,12 @@ function HomePage() {
 
     const [open, setOpen] = useState(false);
 
-    const filterTasks =
+    let filterTasks =
         filterStatus === 'all'
             ? tasks
             : tasks.filter((task) => task.status === filterStatus);
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -66,28 +69,29 @@ function HomePage() {
         setFormData({...formData, [name]: value});
     };
 
+
     return (
         <>
             <div className="home-wrapper">
                 <div className="home-title">
-                    <h2>Povio</h2>
+                    <h2>Otplovio demo</h2>
                 </div>
                 <div className="home-btn">
                     <div className="add-btn">
-                        <Material.Button variant="contained" onClick={() => setOpen(true)} color="primary">
+                        <Material.Button variant="contained" onClick={() => setOpen(true)} color="info">
                             Add post
                         </Material.Button>
                     </div>
                     <div className="filter-btn">
-                        <Material.Button variant="contained" onClick={() => setFilterStatus('all')} color="warning">
+                        <Material.Button variant="contained" onClick={() => setFilterStatus('all')} color="secondary">
                             All
                         </Material.Button>
                         <Material.Button variant="contained" onClick={() => setFilterStatus('Development')}
-                                         color="warning">
+                                         color="secondary">
                             Development
                         </Material.Button>
                         <Material.Button variant="contained" onClick={() => setFilterStatus('Services')}
-                                         color="warning">
+                                         color="secondary">
                             Services
                         </Material.Button>
                     </div>
@@ -152,35 +156,33 @@ function HomePage() {
                 <div className="home-content">
                     <div className="filter-wrapper">
                         <div className="filters">
-                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Frontend</Material.FormLabel>
                             <Material.RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
                                 name="radio-buttons-group"
                             >
-                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
-                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
-                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                                <Material.FormControlLabel value="ract"  control={<Material.Checkbox />} label="React" />
+                                <Material.FormControlLabel value="angular"  control={<Material.Checkbox />} label="Angular" />
                             </Material.RadioGroup>
-                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Backend</Material.FormLabel>
                             <Material.RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
                                 name="radio-buttons-group"
                             >
-                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
-                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
-                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                                <Material.FormControlLabel value="java" control={<Material.Checkbox />} label="Spring boot" />
+                                <Material.FormControlLabel value="ract" control={<Material.Checkbox />} label="Node" />
                             </Material.RadioGroup>
-                            <Material.FormLabel id="demo-radio-buttons-group-label">Programs</Material.FormLabel>
+                            <Material.FormLabel id="demo-radio-buttons-group-label">Design</Material.FormLabel>
                             <Material.RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
                                 name="radio-buttons-group"
                             >
-                                <Material.FormControlLabel value="java" control={<Material.Radio />} label="Java" />
-                                <Material.FormControlLabel value="ract" control={<Material.Radio />} label="React" />
-                                <Material.FormControlLabel value="angular" control={<Material.Radio />} label="Angular" />
+                                <Material.FormControlLabel value="java" control={<Material.Checkbox />} label="UI/UX" />
+                                <Material.FormControlLabel value="ract" control={<Material.Checkbox />} label="Graphic Desing" />
+                                <Material.FormControlLabel value="angular" control={<Material.Checkbox />} label="Adobe" />
                             </Material.RadioGroup>
                         </div>
                     </div>
